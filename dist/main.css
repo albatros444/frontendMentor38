@@ -105,13 +105,13 @@ ul {
   margin-top: 32px;
   padding: 0;
   border: none;
-  border-radius: 8px;
+  border-radius: 6px;
   outline: inherit;
   cursor: pointer;
   font-family: inherit;
   font-weight: 600;
   text-align: center;
-  letter-spacing: 0.07em;
+  letter-spacing: 0.09em;
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -216,7 +216,11 @@ ul {
 @media screen and (max-width: 500px) {
   .background {
     height: auto;
-    background: url(/images/bg-top.svg) right -193px top -35px no-repeat hsl(240, 78%, 98%);
+    padding: 60px 25px 30px;
+    background: url(/images/bg-top.svg) right -195px top -38px no-repeat hsl(240, 78%, 98%);
+  }
+  .background .toggle {
+    margin: 0 auto 80px;
   }
   .background .planCards {
     display: block;
@@ -224,7 +228,11 @@ ul {
   }
   .background .planCards__card {
     width: 100%;
-    margin: 0 auto 35px;
+    margin: 0 auto 32px;
+    padding: 35px 28px;
+  }
+  .background .planCards__card p:nth-child(2) span {
+    margin-right: 6px;
   }
   .background .planCards .basicCard {
     border-radius: 10px;

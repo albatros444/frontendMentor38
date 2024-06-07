@@ -1,15 +1,24 @@
 @media screen and (max-width: 500px) {
   .background {
     height: auto;
-    background: url(/images/bg-top.svg) right -193px top -35px no-repeat
+    padding: 60px 25px 30px; //bottom 35 + 35 on card's margin
+    background: url(/images/bg-top.svg) right -195px top -38px no-repeat
       hsl(240, 78%, 98%);
-
+    .toggle {
+      margin: 0 auto 80px;
+    }
     .planCards {
       display: block;
       width: 100%;
       &__card {
         width: 100%;
-        margin: 0 auto 35px;
+        margin: 0 auto 32px;
+        padding: 35px 28px;
+        p:nth-child(2) {
+          span {
+            margin-right: 6px;
+          }
+        }
       }
       .basicCard {
         border-radius: 10px;
