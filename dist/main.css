@@ -65,43 +65,44 @@ ul {
 .planCards {
   display: flex;
   align-items: center;
-  margin: 0 auto;
+  margin: 0 auto 45px;
   width: 1050px;
 }
 .planCards__card {
-  max-width: 350px;
+  width: 350px;
   height: 453px;
-  padding: 30px;
+  padding: 32px;
   text-align: center;
   color: hsl(233, 13%, 49%);
   box-shadow: 0 10px 30px hsla(237, 63%, 64%, 0.12);
 }
 .planCards__card h2 {
-  font-size: 20px;
+  font-size: 18px;
+}
+.planCards__card p {
+  padding: 16px 0;
+  border-bottom: 1px solid hsl(234, 14%, 90%);
 }
 .planCards__card p:nth-child(2) {
-  padding: 30px 0;
-  font-size: 70px;
-  border-bottom: 1px solid hsl(234, 14%, 80%);
+  display: flex;
+  justify-content: center;
+  padding: 20px 0 25px;
+  font-size: 71px;
+  letter-spacing: -0.02em;
+  border-bottom: 1px solid hsl(234, 14%, 90%);
   color: hsl(232, 13%, 33%);
 }
-.planCards__card p:nth-child(3) {
-  padding: 15px 0;
-  border-bottom: 1px solid hsl(234, 14%, 80%);
-}
-.planCards__card p:nth-child(4) {
-  padding: 15px 0;
-  border-bottom: 1px solid hsl(234, 14%, 80%);
-}
-.planCards__card p:nth-child(5) {
-  padding: 15px 0;
-  border-bottom: 1px solid hsl(234, 14%, 80%);
+.planCards__card p:nth-child(2) span {
+  display: block;
+  font-size: 40px;
+  padding-top: 19px;
+  margin-right: 10px;
 }
 .planCards__card button {
   display: inline-block;
   width: 100%;
-  height: 40px;
-  margin-top: 35px;
+  height: 44px;
+  margin-top: 32px;
   padding: 0;
   border: none;
   border-radius: 8px;
@@ -124,10 +125,13 @@ ul {
 }
 .planCards .professionalCard {
   height: 500px;
-  padding: 55px 25px;
+  padding: 57px 32px;
   border-radius: 10px;
-  background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  background: linear-gradient(to bottom, hsl(236, 72%, 77%), hsla(237, 63%, 64%, 0.9));
   color: white;
+}
+.planCards .professionalCard p {
+  border-bottom: 1px solid hsl(237, 63%, 79%);
 }
 .planCards .professionalCard p:nth-child(2) {
   color: white;
@@ -146,12 +150,13 @@ ul {
 }
 
 .background {
-  height: 100vh;
+  min-height: 100vh;
   padding: 70px 25px 35px;
   background: url(/images/bg-top.svg) right top no-repeat, url(/images/bg-bottom.svg) left bottom no-repeat hsl(240, 78%, 98%);
 }
 .background h1 {
-  margin-bottom: 30px;
+  font-size: 32px;
+  margin-bottom: 40px;
   text-align: center;
   color: hsl(233, 13%, 49%);
 }
@@ -160,7 +165,7 @@ ul {
   justify-content: space-between;
   align-items: center;
   width: 240px;
-  margin: 0 auto 50px;
+  margin: 0 auto 65px;
 }
 .background .toggle p {
   display: inline-block;
@@ -169,7 +174,7 @@ ul {
 .background .toggle .toggleButton {
   position: relative;
   display: inline-block;
-  width: 58px;
+  width: 56px;
   height: 32px;
   border-radius: 32px;
 }
@@ -218,6 +223,7 @@ ul {
     width: 100%;
   }
   .background .planCards__card {
+    width: 100%;
     margin: 0 auto 35px;
   }
   .background .planCards .basicCard {

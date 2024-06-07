@@ -3,12 +3,13 @@
 @import "planCards";
 
 .background {
-  height: 100vh;
+  min-height: 100vh;
   padding: 70px 25px 35px; //bottom 35 + 35 on card's margin
   background: url(/images/bg-top.svg) right top no-repeat,
     url(/images/bg-bottom.svg) left bottom no-repeat hsl(240, 78%, 98%);
   h1 {
-    margin-bottom: 30px;
+    font-size: 32px;
+    margin-bottom: 40px;
     text-align: center;
     color: hsl(233, 13%, 49%);
   }
@@ -18,7 +19,7 @@
     justify-content: space-between;
     align-items: center;
     width: 240px;
-    margin: 0 auto 50px;
+    margin: 0 auto 65px;
     p {
       display: inline-block;
       color: hsl(234, 14%, 74%);
@@ -26,7 +27,7 @@
     .toggleButton {
       position: relative;
       display: inline-block;
-      width: 58px;
+      width: 56px;
       height: 32px;
       border-radius: 32px;
       input {
