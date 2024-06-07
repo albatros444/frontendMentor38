@@ -21,17 +21,53 @@
     <title>Frontend Mentor | [Challenge Name Here]</title>
   </head>
   <body>
-    Our Pricing Annually Monthly Basic &dollar;19.99 &dollar;199.99 500 GB
-    Storage 2 Users Allowed Send up to 3 GB Learn More Professional
-    &dollar;24.99 &dollar;249.99 1 TB Storage 5 Users Allowed Send up to 10 GB
-    Learn More Master &dollar;39.99 &dollar;399.99 2 TB Storage 10 Users Allowed
-    Send up to 20 GB Learn More
+    <div class="background">
+      <h1>Our Pricing</h1>
+      <div class="toggle">
+        <p>Annually</p>
+        <div class="toggleButton">
+          <label class="switch">
+            <input type="checkbox" />
+            <span class="slider"></span>
+          </label>
+        </div>
+        <p>Monthly</p>
+      </div>
+      <div class="planCards">
+        <div class="planCards__card basicCard">
+          <h2>Basic</h2>
+          <p>&dollar;19.99</p>
+          <p>500 GB Storage</p>
+          <p>2 Users Allowed</p>
+          <p>Send up to 3 GB</p>
+          <button>Learn More</button>
+        </div>
+        <div class="planCards__card professionalCard">
+          <h2>Professional</h2>
+          <p>&dollar;24.99</p>
+          <p>1 TB Storage</p>
+          <p>5 Users Allowed</p>
+          <p>Send up to 10 GB</p>
+          <button>Learn More</button>
+        </div>
+        <div class="planCards__card masterCard">
+          <h2>Master</h2>
+          <p>&dollar;39.99</p>
+          <p>2 TB Storage</p>
+          <p>10 Users Allowed</p>
+          <p>Send up to 20 GB</p>
+          <button>Learn More</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- &dollar;199.99 &dollar;249.99 &dollar;399.99 -->
 
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      >. Coded by <a href="#">Batenkin Alexander</a>.
     </div>
   </body>
 </html>
