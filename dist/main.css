@@ -92,7 +92,7 @@ ul {
   border-bottom: 1px solid hsl(234, 14%, 90%);
   color: hsl(232, 13%, 33%);
 }
-.planCards__card p:nth-child(2) span {
+.planCards__card p:nth-child(2) .dollar {
   display: block;
   font-size: 40px;
   padding-top: 19px;
@@ -150,6 +150,9 @@ ul {
 .planCards .basicCard button:hover:before,
 .planCards .masterCard button:hover:before {
   opacity: 0;
+}
+.planCards .masterCard {
+  border-radius: 0px 10px 10px 0px;
 }
 .planCards .professionalCard {
   height: 500px;
