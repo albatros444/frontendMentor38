@@ -109,19 +109,47 @@ ul {
   outline: inherit;
   cursor: pointer;
   font-family: inherit;
+  background: none;
   font-weight: 600;
   text-align: center;
   letter-spacing: 0.09em;
   text-decoration: none;
   text-transform: uppercase;
+  transition: all 0.13s ease-in-out;
 }
-.planCards .basicCard {
+.planCards .basicCard,
+.planCards .masterCard {
   border-radius: 10px 0 0 10px;
-  background-color: white;
+  background: white;
 }
-.planCards .basicCard button {
-  background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+.planCards .basicCard button,
+.planCards .masterCard button {
+  position: relative;
   color: white;
+}
+.planCards .basicCard button::before,
+.planCards .masterCard button::before {
+  position: absolute;
+  content: "learn more";
+  padding-top: 14px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 6px;
+  background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  opacity: 1;
+  transition: all 0.14s ease-in-out;
+}
+.planCards .basicCard button:hover,
+.planCards .masterCard button:hover {
+  border: 1px solid hsl(237, 63%, 64%);
+  background-color: white;
+  color: hsl(237, 63%, 64%);
+}
+.planCards .basicCard button:hover:before,
+.planCards .masterCard button:hover:before {
+  opacity: 0;
 }
 .planCards .professionalCard {
   height: 500px;
@@ -137,15 +165,12 @@ ul {
   color: white;
 }
 .planCards .professionalCard button {
-  background-color: white;
+  background: white;
   color: hsl(237, 63%, 64%);
 }
-.planCards .masterCard {
-  border-radius: 0 10px 10px 0;
-  background-color: white;
-}
-.planCards .masterCard button {
-  background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+.planCards .professionalCard button:hover {
+  background: none;
+  border: 1px solid white;
   color: white;
 }
 
@@ -167,6 +192,9 @@ ul {
   width: 240px;
   margin: 0 auto 65px;
 }
+.background .toggle:hover .slider {
+  opacity: 0.5;
+}
 .background .toggle p {
   display: inline-block;
   color: hsl(234, 14%, 74%);
@@ -184,9 +212,9 @@ ul {
   height: 0;
 }
 .background .toggle .toggleButton input:checked + .slider:before {
-  -webkit-transform: translateX(-26px);
-  -ms-transform: translateX(-26px);
-  transform: translateX(-26px);
+  -webkit-transform: translateX(-24px);
+  -ms-transform: translateX(-24px);
+  transform: translateX(-24px);
 }
 .background .toggle .toggleButton .slider {
   position: absolute;
@@ -198,7 +226,7 @@ ul {
   border-radius: 32px;
   background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
   -webkit-transition: 0.4s;
-  transition: 0.4s;
+  transition: 0.4s, opacity 0.13s;
 }
 .background .toggle .toggleButton .slider:before {
   position: absolute;

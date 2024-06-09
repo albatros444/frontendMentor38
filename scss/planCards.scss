@@ -44,23 +44,47 @@
       outline: inherit;
       cursor: pointer;
       font-family: inherit;
+      background: none;
       font-weight: 600;
       text-align: center;
       letter-spacing: 0.09em;
       text-decoration: none;
       text-transform: uppercase;
+      transition: all 0.13s ease-in-out;
     }
   }
-  .basicCard {
+  .basicCard,
+  .masterCard {
     border-radius: 10px 0 0 10px;
-    background-color: white;
+    background: white;
     button {
-      background: linear-gradient(
-        to right,
-        hsl(236, 72%, 79%),
-        hsl(237, 63%, 64%)
-      );
+      position: relative;
       color: white;
+      &::before {
+        position: absolute;
+        content: "learn more";
+        padding-top: 14px;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 6px;
+        background: linear-gradient(
+          to right,
+          hsl(236, 72%, 79%),
+          hsl(237, 63%, 64%)
+        );
+        opacity: 1;
+        transition: all 0.14s ease-in-out;
+      }
+      &:hover {
+        border: 1px solid hsl(237, 63%, 64%);
+        background-color: white;
+        color: hsl(237, 63%, 64%);
+      }
+      &:hover:before {
+        opacity: 0;
+      }
     }
   }
   .professionalCard {
@@ -72,7 +96,6 @@
       hsl(236, 72%, 77%),
       hsl(237, 63%, 64%, 90%)
     );
-    // background: hsl(237, 63%, 64%, 80%);
     color: white;
     p {
       border-bottom: 1px solid hsl(237, 63%, 79%);
@@ -82,20 +105,13 @@
     }
 
     button {
-      background-color: white;
+      background: white;
       color: hsl(237, 63%, 64%);
-    }
-  }
-  .masterCard {
-    border-radius: 0 10px 10px 0;
-    background-color: white;
-    button {
-      background: linear-gradient(
-        to right,
-        hsl(236, 72%, 79%),
-        hsl(237, 63%, 64%)
-      );
-      color: white;
+      &:hover {
+        background: none;
+        border: 1px solid white;
+        color: white;
+      }
     }
   }
 }

@@ -20,6 +20,12 @@
     align-items: center;
     width: 240px;
     margin: 0 auto 65px;
+
+    &:hover {
+      .slider {
+        opacity: 0.5;
+      }
+    }
     p {
       display: inline-block;
       color: hsl(234, 14%, 74%);
@@ -35,9 +41,9 @@
         width: 0;
         height: 0;
         &:checked + .slider:before {
-          -webkit-transform: translateX(-26px);
-          -ms-transform: translateX(-26px);
-          transform: translateX(-26px);
+          -webkit-transform: translateX(-24px);
+          -ms-transform: translateX(-24px);
+          transform: translateX(-24px);
         }
       }
       .slider {
@@ -54,7 +60,8 @@
           hsl(237, 63%, 64%)
         );
         -webkit-transition: 0.4s;
-        transition: 0.4s;
+        transition: 0.4s, opacity 0.13s;
+
         &:before {
           position: absolute;
           content: "";
